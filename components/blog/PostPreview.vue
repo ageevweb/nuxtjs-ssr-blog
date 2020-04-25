@@ -1,5 +1,5 @@
 <template lang="pug">
-  .post-preview
+  nuxt-link.post-preview(:to="/blog/+post.id")
     img(:src="post.img")
     .post-content
       h3.post-title {{ post.title }}
