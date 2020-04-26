@@ -3,12 +3,10 @@
     .container
       h2.title Contact me!
       form.contact-form(@submit.prevent="onSubmit")
-        label Name:
-        input(type="text" v-model="user.name")
-        label Email:
-        input(type="email" v-model="user.email")
-        label Message:
-        textarea(v-model="user.message")
+
+        AppInput(v-model="user.name") Name:
+        AppInput(v-model="user.email" type="email") Email:
+        AppTextarea(v-model="user.message") Message:
 
         .controls
           AppButton Submit!
@@ -17,11 +15,16 @@
 
 
 <script>
-  import AppButton from '@/components/UI/controls/button'
+  import AppButton from '@/components/UI/controls/Button'
+  import AppInput from '@/components/UI/controls/Input'
+  import AppTextarea from '@/components/UI/controls/TextArea'
+
 
   export default {
     components: {
-      AppButton
+      AppButton,
+      AppInput,
+      AppTextarea
     },
     data(){
       return {

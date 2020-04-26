@@ -3,10 +3,9 @@
     .container
       h2.title New Comment
       form.contact-form(@submit.prevent="onSubmit")
-        label Name:
-        input(type="text" v-model="comment.name")
-        label Comment:
-        textarea(v-model="comment.message")
+
+        AppInput(v-model="comment.name") Name:
+        AppTextarea(v-model="comment.message") Comment:
 
         .controls
           AppButton(btnClass="btnWhite") Submit!
@@ -15,10 +14,15 @@
 
 
 <script>
-  import AppButton from '@/components/UI/controls/button'
+  import AppInput from '@/components/UI/controls/Input'
+  import AppTextarea from '@/components/UI/controls/TextArea'
+  import AppButton from '@/components/UI/controls/Button'
+
 
   export default {
     components: {
+      AppInput,
+      AppTextarea,
       AppButton
     },
     data(){
