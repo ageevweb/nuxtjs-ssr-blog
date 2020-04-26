@@ -11,13 +11,18 @@
         textarea(v-model="user.message")
 
         .controls
-          button.btn.btnPrimary Submit
+          AppButton Submit!
 
 </template>
 
 
 <script>
+  import AppButton from '@/components/UI/controls/button'
+
   export default {
+    components: {
+      AppButton
+    },
     data(){
       return {
         user: {
