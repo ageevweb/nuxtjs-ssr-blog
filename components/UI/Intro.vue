@@ -1,7 +1,10 @@
 <template lang="pug">
   section.intro
     .container
-      h1 {{ title }}
+      h2 {{ title }}
+
+      slot
+
 </template>
 
 <script>
