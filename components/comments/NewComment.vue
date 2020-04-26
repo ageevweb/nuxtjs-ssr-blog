@@ -3,7 +3,7 @@
     .container
       h2.title New Comment
 
-      message(v-if="message" :message="message")
+      Message(v-if="message" :message="message")
 
       form.contact-form(@submit.prevent="onSubmit")
         AppInput(v-model="comment.name") Name:
@@ -16,19 +16,8 @@
 
 
 <script>
-  import message from '@/components/UI/Message'
-  import AppInput from '@/components/UI/controls/Input'
-  import AppTextarea from '@/components/UI/controls/TextArea'
-  import AppButton from '@/components/UI/controls/Button'
-
 
   export default {
-    components: {
-      message,
-      AppInput,
-      AppTextarea,
-      AppButton
-    },
     data(){
       return {
         message: null,

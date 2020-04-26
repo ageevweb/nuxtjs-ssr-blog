@@ -3,7 +3,7 @@
     .container
       h2.title Contact me!
 
-      message(v-if="message" :message="message")
+      Message(v-if="message" :message="message")
 
       form.contact-form(@submit.prevent="onSubmit")
         AppInput(v-model="user.name") Name:
@@ -17,18 +17,9 @@
 
 
 <script>
-  import message from '@/components/UI/Message'
-  import AppButton from '@/components/UI/controls/Button'
-  import AppInput from '@/components/UI/controls/Input'
-  import AppTextarea from '@/components/UI/controls/TextArea'
 
   export default {
-    components: {
-      message,
-      AppButton,
-      AppInput,
-      AppTextarea
-    },
+
     data(){
       return {
         message: null,

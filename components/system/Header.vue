@@ -26,7 +26,7 @@
 </script>
 
 <style lang="scss">
-  .logo a{
+  .logo aage{
     color: #333333;
   }
   .nuxt-link-exact-active{
