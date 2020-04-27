@@ -4,6 +4,7 @@
     .wrapper-content.wrapper-content--fixed
       Intro(title="Admin Page")
         nuxt-link.link.linkWhite(to="/admin") toAdmin
+        nuxt-link.link.linkWhite(to="admin/new-post") toNewPost
       nuxt
 </template>
 
