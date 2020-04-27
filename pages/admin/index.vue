@@ -1,5 +1,5 @@
 <template lang="pug">
-  PostsList(:posts="posts")
+  PostsList(:posts="posts" admin=true)
 </template>
 
 

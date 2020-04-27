@@ -6,6 +6,7 @@
           v-for="post in posts" 
           :key="post.id"
           :post="post"
+          :admin="admin"
         )
         
 </template>
@@ -23,6 +24,10 @@ import postPreview from '@/components/blog/PostPreview'
       posts: {
         type: Array,
         required: true
+      },
+      admin: {
+        type: Boolean,
+        default: false
       }
     }
   }
