@@ -3,7 +3,7 @@
     .container
       h2.title New Comment
 
-      Message(v-if="message" :message="message")
+      AppMessage(v-if="message" :message="message")
 
       form.contact-form(@submit.prevent="onSubmit")
         AppInput(v-model="comment.name") Name:
@@ -30,10 +30,19 @@
     },
     methods: {
       onSubmit(){
-        this.comment.name = '';
-        this.comment.message = '';
-        this.message = 'submited'
-        console.log(this.comment)
+        this.$store.dispatch('addComment', {
+          postId: '',
+          publish: false,
+          ...this.comment
+        })
+          .then(()=> {
+
+            this.comment.name = '';
+            this.comment.message = '';
+            this.message = 'submited'
+            
+          })
+          .catch(e => console.log(e))
       }
     }
   }
