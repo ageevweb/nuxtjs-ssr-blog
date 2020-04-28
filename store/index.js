@@ -21,7 +21,8 @@ export const mutations = {
   },
 
   addComment(state, comment){
-    // state.comentsLoaded.push(comment)
+    state.comentsLoaded.push(comment)
+    console.log(comment)
   },
 }
 
@@ -64,7 +65,7 @@ export const actions = {
       })
       .catch(e => console.log(e))
   },
-  
+
 }
 
 

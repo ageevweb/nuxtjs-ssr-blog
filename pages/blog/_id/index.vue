@@ -2,7 +2,7 @@
   .wrapper-content.wrapper-content--fixed
     post(:post="post")
     comments(:comments="comments")
-    newComment
+    newComment(:postId="$route.params.id")
 </template>
 
 <script>
@@ -25,27 +25,14 @@ export default {
       axios.get(`https://nuxt-blog-68898.firebaseio.com/posts/${context.params.id}.json`),
       axios.get(`https://nuxt-blog-68898.firebaseio.com/comments.json`)
     ])
+
+    // фильтрация комментария
+    let postComments = Object.values(comments.data).filter(comment => (comment.postId === context.params.id) && comment.publish);
+
     return {
       post: post.data,
-      comments: comments.data
+      comments: postComments
     }
   }
-
-  // data(){
-  //   return {
-  //     post: 
-  //       {
-  //         id: 1,
-  //         title: 'title 1',
-  //         descr: 'Lorem ipsum dolor sit amet ',
-  //         img: 'https://www.myplanet-ua.com/wp-content/uploads/2016/03/11_cr.png',
-  //         content: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-  //       },
-  //     comments: [
-  //       {name: 'Alex', text: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
-  //       {name: 'Bishop', text: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
-  //     ]
-  //   }
-  // }
 }
 </script>
