@@ -63,8 +63,10 @@ export const actions = {
         commit('addComment', {...comment, id: res.data.name})
       })
       .catch(e => console.log(e))
-  }
+  },
+  
 }
+
 
 export const getters = {
   getPostsLoaded(state){
