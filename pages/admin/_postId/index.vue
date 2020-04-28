@@ -4,21 +4,19 @@
 
 <script>
 import NewPostForm from '@/components/admin/NewPostForm'
+import axios from 'axios'
 
 export default {
   layout: 'admin',
 
-  data(){
-    return {
-      post: 
-        {
-          id: 1,
-          title: 'title 1',
-          descr: 'Lorem ipsum dolor sit amet ',
-          img: 'https://www.myplanet-ua.com/wp-content/uploads/2016/03/11_cr.png',
-          content: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-        },
-    }
+  asyncData(contex){
+    return axios.get(`https://nuxt-blog-68898.firebaseio.com/posts/${contex.params.postId}.json`)
+      .then(res => {
+        return {
+          post: {...res.data, id: contex.params.postId}
+        } 
+      })
+      .catch(e => contex.error(e))
   },
 
   components: {
@@ -27,7 +25,10 @@ export default {
 
   methods: {
     onSubmit(post){
-      console.log(post)
+      this.$store.dispatch('editPost', post)
+        .then(() => {
+          this.$router.push('/admin')
+        })
     }
   }
 }
