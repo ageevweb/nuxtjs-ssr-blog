@@ -29,10 +29,8 @@ export default {
   methods: {
     onSubmit(){
       this.$store.dispatch('authUser', this.user)
-        .then((res) => {
-          console.log(res)
-          // this.user.email = '';
-          // this.user.password = '';
+        .then(res => {
+          this.$router.push('/admin')
         })
     }
   }
