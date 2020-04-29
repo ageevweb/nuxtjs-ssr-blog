@@ -1,7 +1,7 @@
 <template lang="pug">
   section.auth
     .container
-      form.auth__form(submit.prevent="onSubmit")
+      form.auth__form(@submit.prevent="onSubmit")
         AppInput(v-model="user.email") login:
         AppInput(v-model="user.password") password:
 
@@ -19,8 +19,8 @@ export default {
   data(){
     return {
         user: {
-          email: '',
-          password: ''
+          email: 'ageevweb@gmail.com',
+          password: 'prototypenuxtblog555'
       }
     }
   },
@@ -28,7 +28,12 @@ export default {
 
   methods: {
     onSubmit(){
-
+      this.$store.dispatch('authUser', this.user)
+        .then((res) => {
+          console.log(res)
+          // this.user.email = '';
+          // this.user.password = '';
+        })
     }
   }
 }
@@ -39,3 +44,6 @@ export default {
     margin-top: 200px;
   }
 </style>
+
+
+

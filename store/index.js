@@ -42,6 +42,16 @@ export const actions = {
       .catch(e => console.log(e))
   },
 
+  authUser({commit}, data){
+    let keyStr = 'AIzaSyBz7Cjiee95bbTXRj7Hs-BMvW-ocDDio8E';
+
+    return axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${keyStr}`, {
+      email: data.email,
+      password: data.password,
+      returnSecureToken: true
+    })
+  },
+
   addPost({commit}, post){
     return axios.post('https://nuxt-blog-68898.firebaseio.com/posts.json', post)
       .then(res=> {
