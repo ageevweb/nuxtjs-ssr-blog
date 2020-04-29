@@ -22,6 +22,10 @@ export const mutations = {
 
   setToken(state, token) {
     state.token = token
+  },
+
+  destroyToken(state){
+    state.token = null
   }
 }
 
@@ -46,8 +50,7 @@ export const actions = {
 
     return axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${keyStr}`, {
 
-      // sign UP
-      // `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${keyStr}`
+      // https://firebase.google.com/docs/reference/rest/auth/#section-create-email-password
       
       email: data.email,
       password: data.password,
@@ -76,6 +79,10 @@ export const actions = {
   addComment({commit}, comment) {
     return axios.post(`https://nuxt-blog-68898.firebaseio.com/comments.json`, comment)
   },
+
+  logOutUser({commit}){
+    commit('destroyToken')
+  }
 
 }
 
