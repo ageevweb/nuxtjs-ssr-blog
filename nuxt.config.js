@@ -1,4 +1,6 @@
 
+import axios from 'axios'
+
 export default {
   mode: 'universal',
   /*
@@ -50,6 +52,24 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+
+  generate: {
+    routes () {
+      return axios.get('https://nuxt-blog-68898.firebaseio.com/posts.json')
+        .then((res) => {
+
+          // create id
+          const postsArray = [];
+          for(let key in res.data){
+            postsArray.push({...res.data[key], id: key});
+          }
+
+          return postsArray.map((post) => {
+            return '/blog/' + post.id
+          })
+        })
     }
   }
 }
