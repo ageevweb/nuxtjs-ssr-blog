@@ -2,7 +2,8 @@ import axios from 'axios';
 
 export const state = () => ({
   postLoaded : [],
-  token : null
+  token : null,
+  LastsPosts: []
 })
 
 export const mutations = {
@@ -13,6 +14,16 @@ export const mutations = {
 
   setPosts(state, posts){
     state.postLoaded = posts;
+  },
+
+  setLastsPosts(state, posts){
+    posts.reverse()
+    let lastPostsArr = [];
+
+    for(let i=0; i<4; i++){
+      lastPostsArr.push(posts[i])
+    }
+    state.LastsPosts = lastPostsArr
   },
 
   editPost(state, postEdit){
@@ -41,6 +52,7 @@ export const actions = {
         }
 
         commit('setPosts', postsArray)
+        commit('setLastsPosts', postsArray)
       })
       .catch(e => console.log(e))
   },
@@ -94,4 +106,8 @@ export const getters = {
   checkToken(state){
     return state.token != null
   },
+  getLastsPosts(state){
+    return state.LastsPosts
+  },
+
 }
