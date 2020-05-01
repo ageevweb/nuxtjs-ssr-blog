@@ -16,7 +16,7 @@
     data () {
       return {
         links: [
-          { title: 'Blog', url: '/' },
+          { title: 'Blog', url: '/blog' },
           { title: 'About', url: '/about' },
           { title: 'Admin', url: '/admin' }
         ]
@@ -26,10 +26,18 @@
 </script>
 
 <style lang="scss">
-  .logo aage{
-    color: #333333;
+  .logo a{
+    color: wheat;
   }
   .nuxt-link-exact-active{
-    color: rgb(0, 68, 255);
+    color: saddlebrown !important;
+  }
+
+  .navbar{
+    background-color: #32312d;
+
+    &-item a{
+      color: wheat;
+    }
   }
 </style>

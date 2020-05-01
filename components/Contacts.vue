@@ -1,6 +1,6 @@
 <template lang="pug">
   section.contact
-    .container
+    .container.container--contact
       h2.title Contact me!
 
       Message(v-if="message" :message="message")
@@ -11,7 +11,7 @@
         AppTextarea(v-model="user.message") Message:
 
         .controls
-          AppButton Submit!
+          button.btn.contactBtn Submit!
 
 </template>
 
@@ -44,5 +44,20 @@
 </script>
 
 <style lang="scss">
+  .contact{
+    width: 600px;
+    margin: 0 auto;
+  }
+  .container--contact{
 
+    margin: 0 auto;
+  }
+
+  .contactBtn {
+    background-color: saddlebrown;
+    color: wheat;
+    border: none;
+    margin: 20px auto;
+    display: block;
+  }
 </style>

@@ -1,11 +1,9 @@
 <template lang="pug">
   nuxt-link.post-preview(:to="getLink")
-    img(:src="post.img")
     .post-content
+      img(:src="post.img")
       h3.post-title {{ post.title }}
-      p.post-descr {{ post.descr }}
-        
-        
+   
 </template>
 
 
@@ -32,7 +30,19 @@
 
 <style lang="scss">
   .post-preview{
-    max-width: 33%;
+    max-width: 25%;
     padding: 15px;
+  }
+  .post-content{
+    background-color: #32312d;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .post-title{
+    padding: 10px;
+    text-align: center;
+    color: burlywood;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 25px;
   }
 </style>

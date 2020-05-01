@@ -1,7 +1,5 @@
 <template lang="pug">
   .wrapper-content.wrapper-content--fixed
-
-    Intro(title="My posts: ")
     PostsList(:posts="postsLoaded")
 </template>
 

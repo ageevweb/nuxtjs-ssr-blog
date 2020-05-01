@@ -1,8 +1,7 @@
 <template lang="pug">
   section.intro
     .container
-      h2 {{ title }}
-
+      h2.intro-title {{ title }}
       slot
 
 </template>
@@ -15,7 +14,8 @@ export default {
     title: {
       type: String,
       required: true
-    }
+    },
+
   }
 }
 </script>
@@ -24,8 +24,12 @@ export default {
   .intro{
     width: 100%;
     text-align: center;
-    background: #0059ff;
+    background-color: #32312d;
     padding: 30px;
     color: #fff;
+  }
+
+  .intro-title{
+    font-size: 25px;
   }
 </style>

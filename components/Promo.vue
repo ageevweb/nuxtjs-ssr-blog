@@ -16,9 +16,6 @@
 <style lang="scss">
   .promo{
     text-align: center;
-    
-    p{
-      color: #999;
-    }
+    color: floralwhite;
   }
 </style>

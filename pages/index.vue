@@ -1,8 +1,11 @@
 <template lang="pug">
   .wrapper-content.wrapper-content--fixed
     promo
-    Intro(title="My last posts: ")
+    Intro(title="My last posts: ") 
     PostsList(:posts="postsLoaded")
+    Intro(title="") 
+      nuxt-link(to="/blog")
+        button.btn.introbtn show all posts
     contacts
 </template>
 
@@ -24,5 +27,9 @@ export default {
 </script>
 
 <style>
-
+  .introbtn{
+    background-color: saddlebrown;
+    color: wheat;
+    border: none;
+  }
 </style>

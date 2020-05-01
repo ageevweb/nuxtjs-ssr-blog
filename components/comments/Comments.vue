@@ -29,5 +29,8 @@
 </script>
 
 <style lang="scss">
-
+  .comments{
+    margin: 0 auto;
+    width: 600px;
+  }
 </style>
