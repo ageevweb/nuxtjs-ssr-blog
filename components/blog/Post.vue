@@ -34,13 +34,16 @@ export default {
       display: flex;
     }
     
-
     &-left{
       width: 50%;
       padding-right: 30px;
     }
     &-right{
       width: 50%;
+
+      h1{
+        font-family: 'UnifrakturMaguntia', cursive;
+      }
     }
   }
 </style>

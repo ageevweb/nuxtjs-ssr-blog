@@ -37,6 +37,6 @@ import postPreview from '@/components/blog/PostPreview'
   .posts__wrapper{
     display: flex;
     flex-direction: row;
-    
+    flex-wrap: wrap;
   }
 </style>

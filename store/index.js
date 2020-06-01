@@ -88,6 +88,15 @@ export const actions = {
       .catch(e => console.log(e))
   },
 
+
+  // deletePost({commit}, post){
+  //   return axios.delete(`https://nuxt-blog-68898.firebaseio.com/posts/${post.id}.json`, post)
+  //     .then(res=> {
+  //       commit('addPost', {...post, id: res.data.name})
+  //     })
+  //     .catch(e => console.log(e))
+  // },
+
   addComment({commit}, comment) {
     return axios.post(`https://nuxt-blog-68898.firebaseio.com/comments.json`, comment)
   },

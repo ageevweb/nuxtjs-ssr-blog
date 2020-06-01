@@ -39,10 +39,10 @@
     overflow: hidden;
   }
   .post-title{
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     color: burlywood;
     font-family: 'UnifrakturMaguntia', cursive;
-    font-size: 25px;
+    font-size: 22px;
   }
 </style>
