@@ -2,6 +2,7 @@
   section.not-found
     .container
       .not-found__wrap
+        h1 404
         p page not found
         nuxt-link(to="/") Back to Main page
 </template>
@@ -14,5 +15,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    h1{
+      font-size: 40px;
+    }
   }
 </style>

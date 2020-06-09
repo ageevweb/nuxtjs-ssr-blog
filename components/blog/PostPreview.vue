@@ -37,6 +37,11 @@
     background-color: #32312d;
     border-radius: 10px;
     overflow: hidden;
+    transition: ease all .3s;
+
+    &:hover{
+      opacity: .7
+    }
   }
   .post-title{
     padding: 5px;

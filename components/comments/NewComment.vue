@@ -55,6 +55,9 @@
   }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+  .btnWhite{
+    display: block;
+    margin: 20px auto;
+  }
 </style>

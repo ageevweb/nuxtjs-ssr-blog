@@ -3,7 +3,7 @@
     .container
       form.auth__form(@submit.prevent="onSubmit")
         AppInput(v-model="user.email") login:
-        AppInput(v-model="user.password") password:
+        AppInput(v-model="user.password" type="password") password:
 
         .controls
           AppButton auth
@@ -20,7 +20,7 @@ export default {
     return {
         user: {
           email: 'ageevweb@gmail.com',
-          password: 'prototypenuxtblog555'
+          password: ''
       }
     }
   },

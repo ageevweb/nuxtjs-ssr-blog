@@ -2,20 +2,21 @@
   .wrapper
     Header
     nuxt
+    Footer
 </template>
 
 <script>
 import Header from '@/components/system/Header'
+import Footer from '@/components/system/Footer'
 
   export default {
     components: {
-      Header
+      Header,
+      Footer
     },
 
     data () {
-      return {
-        
-      }
+      return {}
     }
   }
 </script>
@@ -26,7 +27,6 @@ import Header from '@/components/system/Header'
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
-    padding-bottom: 50px;
   }
   label{
     color: blanchedalmond

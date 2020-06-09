@@ -30,6 +30,8 @@ import Header from '@/components/system/Header'
 
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .linkWhite{
+    margin: 20px;
+  }
 </style>

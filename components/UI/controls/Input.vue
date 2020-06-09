@@ -29,3 +29,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  input{
+    margin-bottom: 15px;
+  }
+</style>

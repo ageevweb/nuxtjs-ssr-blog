@@ -7,7 +7,7 @@
         .post-right
           h1.title {{post.title}}
           p {{post.descr}}
-      .post-content
+      .post-cont
         p {{post.content}}
 </template>
 
@@ -40,10 +40,19 @@ export default {
     }
     &-right{
       width: 50%;
-
+      p{
+        font-family: 'Damion', cursive;
+        color: darkred;
+        font-size: 23px;
+      }
       h1{
         font-family: 'UnifrakturMaguntia', cursive;
       }
+    }
+    &-cont{
+      margin-top: 30px;
+      font-weight: 600;
+      color: #333333
     }
   }
 </style>
