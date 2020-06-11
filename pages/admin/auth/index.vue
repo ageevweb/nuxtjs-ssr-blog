@@ -2,8 +2,8 @@
   section.auth
     .container
       form.auth__form(@submit.prevent="onSubmit")
-        AppInput(v-model="user.email") login:
-        AppInput(v-model="user.password" type="password") password:
+        AppInput(v-model="user.email" placeholder="mail@gmail.com") login:
+        AppInput(v-model="user.password" type="password" placeholder="password") password:
 
         .controls
           AppButton auth
@@ -19,7 +19,7 @@ export default {
   data(){
     return {
         user: {
-          email: 'ageevweb@gmail.com',
+          email: '',
           password: ''
       }
     }

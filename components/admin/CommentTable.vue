@@ -22,6 +22,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.status{
+  margin: 0;
+  white-space: nowrap;
+}
+
 // Default table
 table {
   width: 100%;

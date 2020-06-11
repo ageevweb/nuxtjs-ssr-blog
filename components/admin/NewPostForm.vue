@@ -44,3 +44,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .controls{
+    margin-top: 30px;
+
+    button{
+      margin-right: 30px;
+    }
+  }
+</style>
