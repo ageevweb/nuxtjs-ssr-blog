@@ -50,4 +50,5 @@
     font-family: 'UnifrakturMaguntia', cursive;
     font-size: 22px;
   }
+
 </style>

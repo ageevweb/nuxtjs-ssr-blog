@@ -4,7 +4,7 @@
       h2.title New Comment
 
       AppMessage(v-if="message" :message="message")
-
+      
       form.contact-form(@submit.prevent="onSubmit")
         AppInput(v-model="comment.name") Name:
         AppTextarea(v-model="comment.message") Comment:

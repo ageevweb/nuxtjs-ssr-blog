@@ -100,4 +100,32 @@ section, .section {
   opacity: 0;
 }
 
+@media (max-width: 960px) {
+  .post-preview {
+    max-width: 50% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    width: 100%; 
+  }
+  .post-preview {
+    max-width: 80% !important;
+  }
+  .posts__wrapper {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 @import "./common.scss";

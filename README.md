@@ -1,5 +1,7 @@
 # nuxtjs-ssr-blog
 
+VDS : nuxt-blog.ageevweb.com
+
 > My sweet Nuxt.js project
 
 ## Build Setup
